@@ -1,0 +1,317 @@
+/* Color Palette and Typography Variables */
+:root {
+  --bg-butter: #FBF0BE;
+  --surface-cream: #FFFDF5;
+  --surface-white: #FFFFFF;
+  --text-primary: #2B2420;
+  --text-secondary: #5A4A3E;
+  --accent-pink: #B8154F;
+  --gingham-tint: rgba(184, 21, 79, 0.14);
+  --border-soft: rgba(43, 36, 32, 0.15);
+  --font-heading: "Palatino Linotype", Palatino, "Book Antiqua", serif;
+  --font-body: "Times New Roman", Times, Georgia, serif;
+}
+
+/* Base Reset and Readability */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-butter);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.75rem;
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: 1.85rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+}
+
+p, li {
+  max-width: 68ch;
+}
+
+a {
+  color: var(--accent-pink);
+  text-decoration: underline;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+/* Top Pink Gingham Strip and Pattern */
+.gingham-strip,
+.gingham-panel {
+  background-color: var(--surface-cream);
+  background-image:
+    linear-gradient(90deg, var(--gingham-tint) 50%, transparent 50%),
+    linear-gradient(var(--gingham-tint) 50%, transparent 50%);
+  background-size: 28px 28px;
+}
+
+.gingham-strip {
+  height: 24px;
+  width: 100%;
+  border-bottom: 2px solid var(--accent-pink);
+}
+
+/* Navigation Bar (Flexbox) */
+.site-header {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brand {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: var(--accent-pink);
+  color: var(--surface-white);
+  padding: 0.65rem 1.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: bold;
+}
+
+.btn-sm {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.95rem;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Main Layout and Hero Section */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 4rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem 0 1rem;
+}
+
+.hero-text {
+  flex: 1 1 55%;
+}
+
+.hero-intro {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-goal {
+  color: var(--text-secondary);
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+}
+
+.hero-media {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.gingham-panel {
+  padding: 1rem 1rem 0;
+  border: 2px solid var(--accent-pink);
+  border-radius: 14px;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+.gingham-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Content Cards and Grids */
+.card {
+  background-color: var(--surface-cream);
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.card p + p {
+  margin-top: 0.75rem;
+}
+
+.card ul {
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.card li + li {
+  margin-top: 0.5rem;
+}
+
+.meta {
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Paper Resume Sheet */
+.resume-actions {
+  margin-bottom: 1rem;
+}
+
+#resume {
+  background-color: var(--surface-white);
+  color: var(--text-primary);
+  padding: 2.5rem;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 4px 16px rgba(43, 36, 32, 0.08);
+}
+
+.resume-header {
+  border-bottom: 2px solid var(--text-primary);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.resume-profile {
+  margin-bottom: 1.25rem;
+}
+
+.resume-block {
+  margin-top: 1.25rem;
+}
+
+.resume-block h3 {
+  border-bottom: 1px solid var(--border-soft);
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
+.resume-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.4rem;
+}
+
+#resume ul {
+  padding-left: 1.25rem;
+  margin-top: 0.4rem;
+}
+
+/* Responsive, Reduced Motion, and Print Rules */
+@media (max-width: 700px) {
+  #hero, .resume-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a {
+    transition: none;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #resume, #resume * {
+    visibility: visible;
+    color: #000000;
+    background: #FFFFFF;
+  }
+
+  #resume {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+}
